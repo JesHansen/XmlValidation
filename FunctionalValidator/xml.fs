@@ -8,7 +8,7 @@ open System.Xml.Schema
 module XML =
     type XmlSchemaPath = SchemaPath of string
     type XmlFilePath = XmlFilePath of string
-    type ValidationSucceeded = ValidationSucceded
+    type ValidationSucceeded = ValidationSucceeded
     type ValidationFailed =
         | XmlFileNotFound of string
         | ValidationFailed of string
@@ -26,7 +26,7 @@ module XML =
 
         let validateXmlAgainstSchema (XmlFilePath filePath) =
             let doc = XDocument.Load(filePath)
-            let mutable result = Ok ValidationSucceded
+            let mutable result = Ok ValidationSucceeded
             doc.Validate(loadXmlSchema schemaPath, (fun _ e -> result <- Error(ValidationFailed e.Message)))
             result
 
