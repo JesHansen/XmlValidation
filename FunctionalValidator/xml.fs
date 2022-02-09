@@ -13,7 +13,6 @@ module XML =
         | XmlFileNotFound of string
         | ValidationFailed of string
 
-
     type SchemaValidator(schemapath) =
         let schemaPath =
             if File.Exists(schemapath) then SchemaPath schemapath
