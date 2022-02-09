@@ -17,6 +17,7 @@ module XML =
         let schemaPath =
             if File.Exists(schemapath) then SchemaPath schemapath
             else invalidArg (nameof schemapath) $"Could not find XML schema file here: '{schemapath}'"
+
         let loadXmlSchema (SchemaPath path) =
             let tns = XElement.Load(path).Attribute("targetNamespace").Value
             let schemaSet = XmlSchemaSet()
