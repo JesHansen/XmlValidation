@@ -5,8 +5,6 @@ using FunctionalValidator;
 
 var validator = new XML.SchemaValidator(@"C:\src\Skat\rente_schemas\xml\skat2021\view\RenteIndberetningPensiondiverseStrukturType.xsd");
 var result = validator.Check(@"C:\src\Skat\TestXML.xml");
-
-
 var handleOk = (XML.ValidationSucceeded _) =>
 {
     Console.WriteLine("OK!");
@@ -28,4 +26,3 @@ var handleBadness = (XML.ValidationFailed failure) =>
 };
 
 result.Match(handleOk, handleBadness);
-

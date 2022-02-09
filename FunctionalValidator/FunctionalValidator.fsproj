@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Library.fs" />
+    <Compile Include="xml.fs" />
     <Compile Include="Extensions.fs" />
   </ItemGroup>
 
