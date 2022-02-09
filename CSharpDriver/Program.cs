@@ -1,7 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿#pragma warning disable CA1812
 
 using FunctionalValidator;
-
+[assembly:CLSCompliant(false)]
 
 var validator = new XML.SchemaValidator(@"C:\src\Skat\rente_schemas\xml\skat2021\view\RenteIndberetningPensiondiverseStrukturType.xsd");
 var result = validator.Check(@"C:\src\Skat\TestXML.xml");
