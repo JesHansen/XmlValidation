@@ -8,7 +8,7 @@ var result = validator.Check(@"C:\src\Skat\TestXML.xml");
 var handleOk = (XML.ValidationSucceeded _) =>
 {
     Console.WriteLine("OK!");
-    return true;
+    
 };
 var handleBadness = (XML.ValidationFailed failure) =>
 {
@@ -22,7 +22,7 @@ var handleBadness = (XML.ValidationFailed failure) =>
             break;
     }
     
-    return false;
+    
 };
 
-result.Match(handleOk, handleBadness);
+result.Do(handleOk, handleBadness);
